@@ -1,0 +1,15 @@
+# Initialize cache again after config update
+sudo squid -z
+
+# Start Squid
+sudo systemctl start squid
+
+# Check status
+sudo systemctl status squid
+
+# Verify listening on port 3128
+sudo netstat -tulnp | grep 3128
+ss -tulnp | grep 3128
+
+# Monitor logs
+tail -f /var/log/squid/cache.log
