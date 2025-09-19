@@ -34,8 +34,9 @@ This should give command not found if fully removed.
 
 
 
-sudo rm -f /usr/local/sbin/squid
-sudo rm -f /usr/local/sbin/squidclient
+sudo rm -rf /etc/squid
+sudo rm -rf /var/spool/squid
+sudo rm -rf /var/log/squid
 sudo rm -rf /usr/local/etc/squid
-sudo rm -rf /usr/local/var/logs
 sudo rm -rf /usr/local/var/cache/squid
+sudo rm -rf /usr/local/var/logs
