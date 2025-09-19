@@ -1,0 +1,31 @@
+Here’s how you can uninstall Squid from a Red Hat-based system and check if it’s removed:
+
+1. Stop Squid service
+sudo systemctl stop squid
+
+2. Uninstall Squid
+
+For RHEL/CentOS/Fedora:
+
+sudo yum remove squid -y
+
+
+or on newer Fedora versions:
+
+sudo dnf remove squid -y
+
+3. Remove leftover configuration and cache (optional but recommended)
+sudo rm -rf /etc/squid
+sudo rm -rf /var/spool/squid
+sudo rm -rf /var/log/squid
+
+4. Check if Squid is removed
+which squid
+
+
+If it returns nothing, Squid is removed.
+
+squid -v
+
+
+This should give command not found if fully removed.
