@@ -29,3 +29,13 @@ squid -v
 
 
 This should give command not found if fully removed.
+
+
+
+
+
+sudo rm -f /usr/local/sbin/squid
+sudo rm -f /usr/local/sbin/squidclient
+sudo rm -rf /usr/local/etc/squid
+sudo rm -rf /usr/local/var/logs
+sudo rm -rf /usr/local/var/cache/squid
